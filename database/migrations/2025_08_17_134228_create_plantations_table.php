@@ -13,23 +13,23 @@ return new class extends Migration
     {
         Schema::create('tb_plantations', function (Blueprint $table) {
             $table->id();
+            
             // Foreign key relationship to the 'tb_users' table
-            $table->foreignId('user_id')->constrained('tb_users')->onDelete('cascade'); 
-            // Main Plantation Details
+            $table->foreignId('user_id')->constrained('tb_users')->onDelete('cascade');
+            
+            // Plantation Identity & Location (provided by farmer)
             $table->string('name');
             $table->string('province');
             $table->string('city');
             $table->string('district');
             $table->string('village');
+            $table->string('postal_code');
             $table->text('address_detail')->nullable();
-            $table->string('postal_code')->nullable();
-            $table->integer('altitude');
-            $table->decimal('slope_gradient', 5, 2)->nullable();
-            $table->string('slope_aspect')->nullable();
-            $table->decimal('soil_ph', 4, 2)->nullable();
-            $table->string('soil_texture')->nullable();
-            $table->string('organic_matter')->nullable();
-            $table->string('drainage')->nullable();
+            
+            // Coordinates for API calls, this is more accurate
+            $table->decimal('latitude', 10, 7)->nullable();
+            $table->decimal('longitude', 10, 7)->nullable();
+
             $table->timestamps();
         });
     }
