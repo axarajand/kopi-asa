@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             AdminUserSeeder::class,
             VarietySeeder::class,
             RegionSeeder::class,
+            // FarmerSeeder::class,
         ]);
     }
 }

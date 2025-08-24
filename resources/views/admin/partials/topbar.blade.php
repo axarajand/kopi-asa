@@ -25,12 +25,18 @@
                 </li>
                 <li class="dropdown notification-list topbar-dropdown">
                     <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="{{ asset('admin-assets/images/users/user-13.jpg') }}" alt="user-image" class="" />
+                        
+                        {{-- THIS IS THE UPDATED IMAGE TAG --}}
+                        <img src="{{ Auth::user()->profile_photo_path ? asset('storage/' . Auth::user()->profile_photo_path) : asset('admin-assets/images/users/user-default.jpg') }}" alt="user-image" class="" />
+
                     </a>
                     <div class="dropdown-menu dropdown-menu-end profile-dropdown">
                         <div class="dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Selamat Datang, {{ Auth::user()->name }}!</h6>
                         </div>
+
+                        <div class="dropdown-divider"></div>
+
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <a href="{{ route('logout') }}" class="dropdown-item notify-item" 

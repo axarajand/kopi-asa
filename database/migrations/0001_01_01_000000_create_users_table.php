@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['admin', 'farmer'])->default('farmer'); // TAMBAHKAN BARIS INI
+            $table->enum('role', ['admin', 'farmer'])->default('farmer');
+            $table->string('profile_photo_path')->nullable(); 
             $table->rememberToken();
             $table->timestamps();
         });

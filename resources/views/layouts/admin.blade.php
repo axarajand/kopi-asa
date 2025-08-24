@@ -13,6 +13,7 @@
         <link href="{{ asset('admin-assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('admin-assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('admin-assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
         <script src="{{ asset('admin-assets/js/head.js') }}"></script>
     </head>
 
@@ -43,6 +44,7 @@
         <script src="{{ asset('admin-assets/libs/waypoints/lib/jquery.waypoints.min.js') }}"></script>
         <script src="{{ asset('admin-assets/libs/jquery.counterup/jquery.counterup.min.js') }}"></script>
         <script src="{{ asset('admin-assets/libs/feather-icons/feather.min.js') }}"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
         @stack('scripts')
 

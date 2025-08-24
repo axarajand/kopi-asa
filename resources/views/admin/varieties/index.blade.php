@@ -6,7 +6,7 @@
     <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
         <div class="flex-grow-1">
             <ol class="breadcrumb m-0 py-0">
-                <li class="breadcrumb-item">Admin</a></li>
+                <li class="breadcrumb-item">Manajemen Data</a></li>
                 <li class="breadcrumb-item active">Varietas Kopi</li>
             </ol>
         </div>
@@ -34,7 +34,7 @@
                     <tr>
                         <th>Nama Varietas</th>
                         <th>Spesies</th>
-                        <th>Tanggal Dibuat</th>
+                        <th>Catatan</th>
                         <th style="width: 120px;">Aksi</th>
                     </tr>
                 </thead>
@@ -53,7 +53,7 @@
                                     <span class="badge bg-dark-subtle text-dark">{{ $variety->species }}</span>
                                 @endif
                             </td>
-                            <td>{{ $variety->created_at->format('d M Y') }}</td>
+                            <td>{{ $variety->notes }}</td>
                             <td>
                                 <div class="d-flex gap-2">
                                     <button type="button" class="btn btn-sm btn-warning edit-btn" data-id="{{ $variety->id }}" data-bs-toggle="modal" data-bs-target="#edit-variety-modal">Edit</button>

@@ -6,7 +6,7 @@
     <div class="py-3 d-flex justify-content-between align-items-center">
         <div class="flex-grow-1">
             <ol class="breadcrumb m-0 py-0">
-                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
+                <li class="breadcrumb-item">Manajemen Data</a></li>
                 <li class="breadcrumb-item active">Daerah Kopi</li>
             </ol>
         </div>

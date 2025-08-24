@@ -1,0 +1,10 @@
+{
+    "The :attribute field must be at least :min characters.": "Kolom :attribute minimal harus :min karakter.",
+    "The :attribute field must be a valid email address.": "Kolom :attribute harus berupa alamat email yang valid.",
+    "The :attribute field is required.": "Kolom :attribute wajib diisi.",
+    "The :attribute field must not be greater than :max characters.": "Kolom :attribute tidak boleh lebih dari :max karakter.",
+    "The :attribute has already been taken.": ":attribute ini sudah terdaftar.",
+    "The :attribute field must be an image.": "Kolom :attribute harus berupa file gambar.",
+    "The :attribute field must be a file of type: :values.": "Kolom :attribute harus berupa file dengan tipe: :values.",
+    "The :attribute field must not be greater than :max kilobytes.": "Ukuran :attribute tidak boleh lebih dari :max kilobyte."
+}
