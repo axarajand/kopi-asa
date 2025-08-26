@@ -1,90 +1,164 @@
 # KopiAsa - Coffee Quality Prediction System
 
-KopiAsa is a web application designed to assist coffee farmers and stakeholders in predicting the final quality of coffee beans based on various agronomic, environmental, and post-harvest processing parameters. This application combines a machine learning model and a heuristic model to provide data-driven insights.
+KopiAsa is a data-driven web application designed to assist coffee farmers and stakeholders in predicting the final quality score and pH level of coffee beans. It utilizes a combination of a machine learning model for quality assessment and a heuristic model for pH estimation, based on a comprehensive set of agronomic, environmental, and processing parameters.
+
+This project serves as a complete demonstration of integrating a Python-based machine learning service with a robust Laravel backend, providing a powerful admin panel for data management and analysis.
+
+---
 
 ## Key Features
 
-### Admin Panel
-- **Master Data Management:**
-  - Full CRUD (Create, Read, Update, Delete) for Coffee Varieties.
-  - Full CRUD for Coffee Regions.
-  - Full CRUD for Farmer Account Management (complete with avatars).
-  - Full CRUD for Plantation Management, including location pinning via an interactive map (Leaflet.js).
-- **Real-time Parameter Data:**
-  - Displays real-time Climate data (temperature, humidity, yearly precipitation) for each plantation using external APIs.
-  - Displays Topography data (elevation, slope, and aspect) calculated from external APIs.
-  - Displays Soil data (pH, texture, etc.) using a hybrid system: attempts to fetch from an API, and provides a manual input option upon failure.
-- **Analysis & Prediction:**
-  - **Quality Score Prediction:** Utilizes a **Gradient Boosting** machine learning model (Python/Scikit-learn) integrated via a local Flask API.
-  - **Coffee pH Prediction:** Employs a "Smart Calculator" (heuristic model) built within Laravel based on scientific rules.
-  - **Prediction History:** Saves and displays a log of all predictions made for tracking and analysis.
+### 1. Admin Dashboard
+- **At-a-Glance Statistics:** Dynamic cards displaying total registered farmers, plantations, coffee varieties, and the number of predictions performed.
+- **Recent Activity:** A table showing the 5 most recent prediction histories for quick review.
 
-### Architecture & Technology
+### 2. Data Management (Full CRUD)
+- **Farmer Management:** Create, Read, Update, and Delete farmer accounts, complete with profile avatars.
+- **Plantation Management:** Manage farm data, including location details determined via an interactive Leaflet.js map.
+- **Coffee Variety Management:** A complete CRUD for coffee varieties (Arabica, Robusta, etc.).
+- **Coffee Region Management:** A complete CRUD for coffee growing regions.
+
+### 3. Real-time Parameter Data
+- **Hybrid Data Model:** Each parameter page displays a table of all registered plantations. It first shows data from the local database. If data is missing, it attempts to fetch it from a real-time API.
+- **Automatic Saving:** Data successfully fetched from an API is automatically saved to the database for future use, optimizing speed and reducing API calls.
+- **Manual Input Fallback:** If an API call fails or returns no data, a button appears, allowing the administrator to manually input the data, ensuring a complete dataset.
+- **Data Sources:**
+  - **Climate:** Temperature, humidity, and yearly precipitation from Open-Meteo.
+  - **Topography:** Elevation, slope, and aspect calculated using the Open-Elevation API.
+  - **Soil:** pH, texture, organic matter, and drainage data from the ISRIC SoilGrids API.
+
+### 4. Analysis & Prediction
+- **Quality Score Prediction:**
+  - Utilizes a **Gradient Boosting Regressor** model trained in Python with Scikit-learn.
+  - The model is served via a local **Flask API**, decoupling the ML service from the main application.
+  - Predicts a score based on the Specialty Coffee Association (SCA) 100-point scale.
+  - Provides a qualitative description (e.g., "Excellent", "Very Good") for the score.
+- **Coffee pH Prediction:**
+  - Employs a "Smart Calculator"—a **heuristic model** built in PHP—based on scientific rules and correlations between plantation parameters and coffee acidity.
+  - Provides an estimated pH range and a qualitative description (e.g., "Balanced Acidity", "Mild").
+- **Prediction History:**
+  - All predictions can be saved to a history log.
+  - A dedicated page displays a full, searchable, and sortable DataTables log of all past predictions.
+  - Users can view the detailed results of any past prediction in a modal pop-up.
+
+---
+
+## Tech Stack
 - **Backend:** Laravel 12 (PHP 8.3+)
 - **Frontend:** Blade, Bootstrap 5, jQuery, DataTables, Leaflet.js
 - **Database:** MySQL
-- **Machine Learning:**
-  - Python 3.12+
-  - Scikit-learn, Pandas, Joblib
+- **Machine Learning Service:**
+  - Python 3.11+
   - Flask (for serving the model as a local API)
-- **Deployment:** XAMPP (for the local development environment)
+  - Scikit-learn, Pandas, Joblib
+- **Local Development:** XAMPP (Windows), Homebrew/Valet (macOS)
+
+---
 
 ## Local Setup & Installation
 
-1.  **Clone this repository:**
+Follow these instructions to set up the project on your local machine.
+
+### Installation on Windows (with XAMPP)
+
+**Prerequisites:**
+- XAMPP (with PHP 8.3+, Apache, MySQL)
+- Composer
+- Git
+- Python (3.11+ recommended)
+
+**Steps:**
+1.  **Clone Repository:**
     ```bash
     git clone [YOUR_REPOSITORY_URL]
     cd kopi-asa
     ```
-2.  **Install PHP dependencies:**
+2.  **Install PHP Dependencies:**
     ```bash
     composer install
     ```
-3.  **Set up the `.env` file:**
+3.  **Environment Setup:**
     ```bash
-    cp .env.example .env
-    ```
-4.  **Generate the application key:**
-    ```bash
+    copy .env.example .env
     php artisan key:generate
     ```
-5.  **Configure your database in the `.env` file:**
-    ```
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=kopiasa
-    DB_USERNAME=root
-    DB_PASSWORD=
-    ```
-6.  **Run migrations and seed the database to create tables and initial data:**
+4.  **Database Setup:**
+    - Open XAMPP Control Panel and start Apache & MySQL.
+    - Go to `http://localhost/phpmyadmin` and create a new database named `kopiasa`.
+    - Edit your `.env` file with your database credentials (by default, username is `root` and password is empty).
+5.  **Run Migrations & Seeding:** This will create all tables and populate them with initial data (admin account, varieties, etc.).
     ```bash
     php artisan migrate:fresh --seed
     ```
-7.  **Create the storage symbolic link:**
+6.  **Storage Link:**
     ```bash
     php artisan storage:link
     ```
-8.  **Install Python dependencies:**
+7.  **Setup Python Environment:**
     ```bash
-    pip install pandas scikit-learn joblib Flask
+    # Create a virtual environment
+    python -m venv venv
+    # Activate it
+    .\venv\Scripts\activate
+    # Install required libraries
+    pip install -r requirements.txt
     ```
-9.  **Train the Machine Learning model (only needs to be run once):**
+8.  **Train the ML Model (run once):**
     ```bash
     python ml/train_model.py
     ```
 
+### Installation on macOS
+
+**Prerequisites:**
+- Homebrew
+- PHP 8.3+, Composer, Git, Python 3.11+ (can be installed via Homebrew)
+- MySQL (can be installed via Homebrew or a GUI tool like DBngin)
+
+**Steps:**
+1.  **Clone Repository:**
+    ```bash
+    git clone [YOUR_REPOSITORY_URL]
+    cd kopi-asa
+    ```
+2.  **Install PHP Dependencies:** `composer install`
+3.  **Environment Setup:**
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+4.  **Database Setup:**
+    - Start your MySQL server.
+    - Create a new database: `mysql -u root -p -e "CREATE DATABASE kopiasa;"`
+    - Edit your `.env` file with your database credentials.
+5.  **Run Migrations & Seeding:** `php artisan migrate:fresh --seed`
+6.  **Storage Link:** `php artisan storage:link`
+7.  **Setup Python Environment:**
+    ```bash
+    # Create a virtual environment
+    python3 -m venv venv
+    # Activate it
+    source venv/bin/activate
+    # Install required libraries
+    pip install -r requirements.txt
+    ```
+8.  **Train the ML Model (run once):**
+    ```bash
+    python3 ml/train_model.py
+    ```
+
+---
+
 ## Running the Application
 
-To run this application, you need to run **two processes** in two separate terminals:
+To run the application, you need **two separate terminals** running concurrently inside the `kopi-asa` project directory.
 
-1.  **Terminal 1: Run the Python API Server:**
-    ```bash
-    python ml/app.py
-    ```
-2.  **Terminal 2: Run the Laravel Server:**
-    ```bash
-    php artisan serve
-    ```
+**1. Terminal 1: Start the Python API Server**
+```bash
+# On Windows
+.\venv\Scripts\activate
+python ml/app.py
 
-The web application will be available at `http://127.0.0.1:8000`.
+# On macOS
+source venv/bin/activate
+python3 ml/app.py
