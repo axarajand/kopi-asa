@@ -63,11 +63,11 @@
                     <input type="hidden" id="longitude" name="longitude" class="form-control" readonly>
                     <div class="mb-3">
                         <label for="address_detail" class="form-label">Detail Alamat (Opsional)</label>
-                        <textarea name="address_detail" id="address_detail" rows="2" class="form-control"></textarea>
+                        <textarea name="address_detail" id="address_detail" rows="2" class="form-control" placeholder="Contoh: Jl. Kiansantang, RT.004/RW.003"></textarea>
                     </div>
                      <div class="mb-3">
                         <label for="postal_code" class="form-label">Kode Pos</label>
-                        <input type="text" id="postal_code" name="postal_code" class="form-control" required>
+                        <input type="text" id="postal_code" name="postal_code" class="form-control" required placeholder="Contoh: 44131">
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="notes" class="form-label">Catatan (Opsional)</label>
-                        <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                        <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Contoh: Varietas dari Puslitkoka Jember, adaptif di dataran tinggi, rentan terhadap nematoda."></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

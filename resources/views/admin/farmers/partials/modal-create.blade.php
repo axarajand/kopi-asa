@@ -10,15 +10,15 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama Lengkap</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
+                        <input type="text" id="name" name="name" class="form-control" required placeholder="Contoh: Asep Ujang">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Alamat Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
+                        <input type="email" id="email" name="email" class="form-control" required placeholder="Contoh: asepujang@gmail.com">
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" required>
+                        <input type="password" id="password" name="password" class="form-control" required placeholder="Wajib diisi!">
                     </div>
                     <div class="mb-3">
                         <label for="avatar" class="form-label">Foto Profil (Avatar)</label>
