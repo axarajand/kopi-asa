@@ -6,7 +6,7 @@ This project serves as a complete demonstration of integrating a Python-based ma
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### 1. Admin Dashboard
 - **At-a-Glance Statistics:** Dynamic cards displaying total registered farmers, plantations, coffee varieties, and the number of predictions performed.
@@ -36,7 +36,7 @@ This project serves as a complete demonstration of integrating a Python-based ma
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Backend:** Laravel 12 (PHP 8.3+)
 - **Frontend:** Blade, Bootstrap 5, jQuery, DataTables, Leaflet.js
 - **Database:** MySQL
@@ -48,7 +48,7 @@ This project serves as a complete demonstration of integrating a Python-based ma
 
 ---
 
-## ⚙️ Local Setup & Installation
+## Local Setup & Installation
 
 Follow these instructions to set up the project on your local machine.
 
@@ -148,7 +148,7 @@ Follow these instructions to set up the project on your local machine.
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 To run the application, you need **two separate terminals** running concurrently inside the `kopi-asa` project directory.
 
@@ -177,11 +177,11 @@ php artisan serve
 ```
 
 The web application will be available at:  
-👉 `http://127.0.0.1:8000`
+`http://127.0.0.1:8000`
 
 ---
 
-### 🔑 Default Credentials
+### Default Credentials
 
 Use the following login credentials to access the **Admin Dashboard**:
 
@@ -190,6 +190,6 @@ Use the following login credentials to access the **Admin Dashboard**:
 
 ---
 
-## 📜 License
+## License
 
 MIT License © 2025 Axa Rajandrya
