@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KopiAsa — Daerah</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="assets/script.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="bg-cream-50">
+
+<!-- ============== TOP NAV (DESKTOP) ============== -->
+<header class="hidden md:block sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-coffee-100">
+  <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+    <a href="index.html">
+      <h1 class="font-script text-4xl text-coffee-700 leading-none">KopiAsa</h1>
+    </a>
+    <nav class="flex items-center gap-12 text-coffee-600">
+      <a href="index.html"      class="nav-link text-sm tracking-wide">Beranda</a>
+      <a href="kategori.html"   class="nav-link text-sm tracking-wide">Kategori</a>
+      <a href="daerah.html"     class="nav-link text-sm tracking-wide active">Daerah</a>
+      <a href="lingkungan.html" class="nav-link text-sm tracking-wide">Lingkungan</a>
+      <a href="forum.html"      class="nav-link text-sm tracking-wide">Forum</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="w-11 h-11 rounded-full bg-ember-400 hover:bg-ember-500 transition flex items-center justify-center text-coffee-700">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== TOP BAR (MOBILE) ============== -->
+<header class="md:hidden sticky top-0 z-40 bg-cream-50/95 backdrop-blur-md border-b border-coffee-100">
+  <div class="px-5 py-3.5 flex items-center justify-between">
+    <h1 class="font-serif-display text-2xl font-semibold text-coffee-700">Daerah</h1>
+    <button class="w-9 h-9 rounded-full bg-ember-400 flex items-center justify-center text-coffee-700">
+      <i data-lucide="user" class="w-4 h-4"></i>
+    </button>
+  </div>
+</header>
+
+<section class="page pb-24 md:pb-16">
+  <div class="max-w-5xl mx-auto px-5 md:px-8 pt-10 md:pt-16">
+    <div class="mb-10 md:mb-14">
+      <span class="text-leaf-500 text-xs uppercase tracking-[0.25em]">— Sentra Kopi Indonesia</span>
+      <h2 class="font-serif-display text-4xl md:text-6xl text-coffee-700 mt-3 leading-[1.05]">
+        Dari ujung Sumatera<br/>hingga <em class="text-coffee-500">Sulawesi.</em>
+      </h2>
+      <p class="text-coffee-500 mt-5 max-w-xl">Setiap daerah meninggalkan jejaknya pada cangkir. Kenali karakter sentra-sentra kopi nusantara.</p>
+    </div>
+
+    <div class="space-y-5">
+
+      <!-- Aceh Gayo -->
+      <div class="lift-card bg-cream-100 rounded-2xl p-6 md:p-8 border border-coffee-100 grid md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-2 flex md:block items-center gap-4">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-coffee-700 flex items-center justify-center text-cream-50 shadow-card">
+            <span class="font-serif-display italic text-2xl md:text-3xl">01</span>
+          </div>
+          <div class="md:hidden">
+            <h3 class="font-serif-display text-2xl text-coffee-700">Aceh Gayo</h3>
+            <p class="text-xs text-leaf-500 uppercase tracking-wider">Sumatera</p>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <h3 class="hidden md:block font-serif-display text-3xl text-coffee-700">Aceh Gayo</h3>
+          <p class="hidden md:block text-xs text-leaf-500 uppercase tracking-wider mt-0.5">Sumatera · Dataran Tinggi Gayo</p>
+          <p class="text-coffee-500 text-sm leading-relaxed mt-3">
+            Body penuh dengan keasaman halus, sentuhan rempah dan cokelat hitam. Salah satu Arabika paling dicari di lelang specialty dunia.
+          </p>
+        </div>
+        <div class="md:col-span-3 flex md:flex-col gap-2">
+          <span class="px-3 py-1.5 bg-coffee-700 text-cream-50 text-xs rounded-full text-center">1.200–1.700 mdpl</span>
+          <span class="px-3 py-1.5 bg-ember-400 text-coffee-700 text-xs rounded-full text-center font-medium">Earthy · Spicy</span>
+        </div>
+      </div>
+
+      <!-- Toraja -->
+      <div class="lift-card bg-coffee-700 text-cream-50 rounded-2xl p-6 md:p-8 grid md:grid-cols-12 gap-6 items-center relative overflow-hidden">
+        <div class="absolute -top-6 right-10 w-24 h-24 rounded-full bg-coffee-600 opacity-50"></div>
+        <div class="md:col-span-2 flex md:block items-center gap-4 relative">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-ember-400 flex items-center justify-center text-coffee-700 shadow-card">
+            <span class="font-serif-display italic text-2xl md:text-3xl">02</span>
+          </div>
+          <div class="md:hidden">
+            <h3 class="font-serif-display text-2xl">Toraja</h3>
+            <p class="text-xs text-ember-400 uppercase tracking-wider">Sulawesi</p>
+          </div>
+        </div>
+        <div class="md:col-span-7 relative">
+          <h3 class="hidden md:block font-serif-display text-3xl">Toraja</h3>
+          <p class="hidden md:block text-xs text-ember-400 uppercase tracking-wider mt-0.5">Sulawesi Selatan · Pegunungan Sesean</p>
+          <p class="text-cream-100/85 text-sm leading-relaxed mt-3">
+            Aftertaste panjang dengan sentuhan kayu manis dan kardamom. Keasaman lembut, body tebal — kopi yang membumi seperti tanah Tanah Toraja sendiri.
+          </p>
+        </div>
+        <div class="md:col-span-3 flex md:flex-col gap-2 relative">
+          <span class="px-3 py-1.5 bg-cream-50 text-coffee-700 text-xs rounded-full text-center">1.400–1.900 mdpl</span>
+          <span class="px-3 py-1.5 bg-leaf-500 text-cream-50 text-xs rounded-full text-center font-medium">Spicy · Woody</span>
+        </div>
+      </div>
+
+      <!-- Kintamani -->
+      <div class="lift-card bg-cream-100 rounded-2xl p-6 md:p-8 border border-coffee-100 grid md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-2 flex md:block items-center gap-4">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-leaf-500 flex items-center justify-center text-cream-50 shadow-card">
+            <span class="font-serif-display italic text-2xl md:text-3xl">03</span>
+          </div>
+          <div class="md:hidden">
+            <h3 class="font-serif-display text-2xl text-coffee-700">Kintamani</h3>
+            <p class="text-xs text-leaf-500 uppercase tracking-wider">Bali</p>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <h3 class="hidden md:block font-serif-display text-3xl text-coffee-700">Kintamani</h3>
+          <p class="hidden md:block text-xs text-leaf-500 uppercase tracking-wider mt-0.5">Bali · Lereng Gunung Batur</p>
+          <p class="text-coffee-500 text-sm leading-relaxed mt-3">
+            Asam jeruk yang cerah, aroma floral, sentuhan citrus segar. Pertama di Indonesia yang meraih sertifikasi Indikasi Geografis (IG).
+          </p>
+        </div>
+        <div class="md:col-span-3 flex md:flex-col gap-2">
+          <span class="px-3 py-1.5 bg-coffee-700 text-cream-50 text-xs rounded-full text-center">900–1.500 mdpl</span>
+          <span class="px-3 py-1.5 bg-ember-400 text-coffee-700 text-xs rounded-full text-center font-medium">Citrus · Floral</span>
+        </div>
+      </div>
+
+      <!-- Pagar Alam -->
+      <div class="lift-card bg-cream-100 rounded-2xl p-6 md:p-8 border border-coffee-100 grid md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-2 flex md:block items-center gap-4">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-coffee-500 flex items-center justify-center text-cream-50 shadow-card">
+            <span class="font-serif-display italic text-2xl md:text-3xl">04</span>
+          </div>
+          <div class="md:hidden">
+            <h3 class="font-serif-display text-2xl text-coffee-700">Pagar Alam</h3>
+            <p class="text-xs text-leaf-500 uppercase tracking-wider">Sumatera Selatan</p>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <h3 class="hidden md:block font-serif-display text-3xl text-coffee-700">Pagar Alam</h3>
+          <p class="hidden md:block text-xs text-leaf-500 uppercase tracking-wider mt-0.5">Sumatera Selatan · Lereng Dempo</p>
+          <p class="text-coffee-500 text-sm leading-relaxed mt-3">
+            Robusta premium dengan sentuhan dark chocolate dan caramel. Body dalam, sedikit smoky — pilihan favorit untuk espresso blend.
+          </p>
+        </div>
+        <div class="md:col-span-3 flex md:flex-col gap-2">
+          <span class="px-3 py-1.5 bg-coffee-700 text-cream-50 text-xs rounded-full text-center">700–1.200 mdpl</span>
+          <span class="px-3 py-1.5 bg-ember-400 text-coffee-700 text-xs rounded-full text-center font-medium">Chocolate · Caramel</span>
+        </div>
+      </div>
+
+      <!-- Mandailing -->
+      <div class="lift-card bg-cream-100 rounded-2xl p-6 md:p-8 border border-coffee-100 grid md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-2 flex md:block items-center gap-4">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-coffee-800 flex items-center justify-center text-cream-50 shadow-card">
+            <span class="font-serif-display italic text-2xl md:text-3xl">05</span>
+          </div>
+          <div class="md:hidden">
+            <h3 class="font-serif-display text-2xl text-coffee-700">Mandailing</h3>
+            <p class="text-xs text-leaf-500 uppercase tracking-wider">Sumatera Utara</p>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <h3 class="hidden md:block font-serif-display text-3xl text-coffee-700">Mandailing</h3>
+          <p class="hidden md:block text-xs text-leaf-500 uppercase tracking-wider mt-0.5">Sumatera Utara · Bukit Barisan</p>
+          <p class="text-coffee-500 text-sm leading-relaxed mt-3">
+            Karakter earthy yang dalam, aftertaste herbal halus. Diolah dengan metode giling basah (wet hulling) khas Sumatera — menghasilkan body kental yang ikonik.
+          </p>
+        </div>
+        <div class="md:col-span-3 flex md:flex-col gap-2">
+          <span class="px-3 py-1.5 bg-coffee-700 text-cream-50 text-xs rounded-full text-center">1.000–1.500 mdpl</span>
+          <span class="px-3 py-1.5 bg-ember-400 text-coffee-700 text-xs rounded-full text-center font-medium">Earthy · Herbal</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== BOTTOM NAV (MOBILE) ============== -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-cream-50 border-t border-coffee-100 z-40 backdrop-blur-md bg-cream-50/95">
+  <div class="grid grid-cols-5">
+    <a href="index.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="home" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="kategori.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="coffee" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Kategori</span>
+    </a>
+    <a href="daerah.html" class="bnav-item active flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="map-pin" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Daerah</span>
+    </a>
+    <a href="lingkungan.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="leaf" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Lingkungan</span>
+    </a>
+    <a href="forum.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Forum</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

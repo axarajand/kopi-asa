@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KopiAsa — Kategori</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="assets/script.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="bg-cream-50">
+
+<!-- ============== TOP NAV (DESKTOP) ============== -->
+<header class="hidden md:block sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-coffee-100">
+  <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+    <a href="index.html">
+      <h1 class="font-script text-4xl text-coffee-700 leading-none">KopiAsa</h1>
+    </a>
+    <nav class="flex items-center gap-12 text-coffee-600">
+      <a href="index.html"      class="nav-link text-sm tracking-wide">Beranda</a>
+      <a href="kategori.html"   class="nav-link text-sm tracking-wide active">Kategori</a>
+      <a href="daerah.html"     class="nav-link text-sm tracking-wide">Daerah</a>
+      <a href="lingkungan.html" class="nav-link text-sm tracking-wide">Lingkungan</a>
+      <a href="forum.html"      class="nav-link text-sm tracking-wide">Forum</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="w-11 h-11 rounded-full bg-ember-400 hover:bg-ember-500 transition flex items-center justify-center text-coffee-700">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== TOP BAR (MOBILE) ============== -->
+<header class="md:hidden sticky top-0 z-40 bg-cream-50/95 backdrop-blur-md border-b border-coffee-100">
+  <div class="px-5 py-3.5 flex items-center justify-between">
+    <h1 class="font-serif-display text-2xl font-semibold text-coffee-700">Kategori</h1>
+    <button class="w-9 h-9 rounded-full bg-ember-400 flex items-center justify-center text-coffee-700">
+      <i data-lucide="user" class="w-4 h-4"></i>
+    </button>
+  </div>
+</header>
+
+<section class="page pb-24 md:pb-16">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-16">
+    <div class="mb-10 md:mb-14">
+      <span class="text-leaf-500 text-xs uppercase tracking-[0.25em]">— Varietas</span>
+      <h2 class="font-serif-display text-4xl md:text-6xl text-coffee-700 mt-3 leading-[1.05]">
+        Empat <em class="text-coffee-500">karakter</em>,<br/>satu <span class="font-script text-ember-500">kebun.</span>
+      </h2>
+      <p class="text-coffee-500 mt-5 max-w-xl">Kenali profil tiap varietas sebelum memutuskan apa yang Anda tanam musim depan.</p>
+    </div>
+
+    <!-- Grid 4 cards -->
+    <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+
+      <!-- Arabika -->
+      <div class="lift-card bg-cream-100 rounded-3xl p-7 md:p-9 border border-coffee-100 relative overflow-hidden">
+        <div class="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-coffee-200 opacity-30"></div>
+        <div class="flex items-start justify-between mb-6 relative">
+          <div class="w-16 h-16 rounded-2xl bg-coffee-700 flex items-center justify-center shadow-card">
+            <span class="text-cream-50 font-serif-display italic text-3xl">A</span>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-coffee-500">01 / 04</span>
+        </div>
+        <h3 class="font-serif-display text-3xl text-coffee-700 mb-1">Arabika</h3>
+        <p class="text-xs uppercase tracking-wider text-leaf-500 italic">Coffea arabica</p>
+        <p class="text-coffee-500 text-sm leading-relaxed mt-4">
+          Aroma kompleks, asam terang yang elegan. Diminta dunia specialty. Sensitif terhadap penyakit dan suhu, butuh tangan yang sabar.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="px-3 py-1.5 bg-coffee-700 text-cream-50 text-xs rounded-full">15–24°C</span>
+          <span class="px-3 py-1.5 bg-leaf-500 text-cream-50 text-xs rounded-full">1.000+ mdpl</span>
+          <span class="px-3 py-1.5 bg-cream-50 text-coffee-600 text-xs rounded-full border border-coffee-200">pH 5.6–6.2</span>
+        </div>
+      </div>
+
+      <!-- Robusta -->
+      <div class="lift-card bg-coffee-700 text-cream-50 rounded-3xl p-7 md:p-9 relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-coffee-600 opacity-50"></div>
+        <div class="flex items-start justify-between mb-6 relative">
+          <div class="w-16 h-16 rounded-2xl bg-ember-400 flex items-center justify-center shadow-card">
+            <span class="text-coffee-700 font-serif-display italic text-3xl">R</span>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-cream-100/70">02 / 04</span>
+        </div>
+        <h3 class="font-serif-display text-3xl mb-1">Robusta</h3>
+        <p class="text-xs uppercase tracking-wider text-ember-400 italic">Coffea canephora</p>
+        <p class="text-cream-100/85 text-sm leading-relaxed mt-4">
+          Tubuh tebal, kafein tinggi, pahit memikat. Tahan banting terhadap hama. Penopang utama produksi kopi nasional.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="px-3 py-1.5 bg-cream-50 text-coffee-700 text-xs rounded-full">22–28°C</span>
+          <span class="px-3 py-1.5 bg-leaf-500 text-cream-50 text-xs rounded-full">400–800 mdpl</span>
+          <span class="px-3 py-1.5 bg-coffee-800 text-cream-100 text-xs rounded-full">pH 5.0–6.0</span>
+        </div>
+      </div>
+
+      <!-- Liberika -->
+      <div class="lift-card bg-cream-100 rounded-3xl p-7 md:p-9 border border-coffee-100 relative overflow-hidden">
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-leaf-100 opacity-50"></div>
+        <div class="flex items-start justify-between mb-6 relative">
+          <div class="w-16 h-16 rounded-2xl bg-leaf-500 flex items-center justify-center shadow-card">
+            <span class="text-cream-50 font-serif-display italic text-3xl">L</span>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-coffee-500">03 / 04</span>
+        </div>
+        <h3 class="font-serif-display text-3xl text-coffee-700 mb-1">Liberika</h3>
+        <p class="text-xs uppercase tracking-wider text-leaf-500 italic">Coffea liberica</p>
+        <p class="text-coffee-500 text-sm leading-relaxed mt-4">
+          Buah berukuran besar, aroma smoky-woody yang khas. Identitas perkebunan gambut Sumatera dan Riau.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="px-3 py-1.5 bg-coffee-700 text-cream-50 text-xs rounded-full">25–30°C</span>
+          <span class="px-3 py-1.5 bg-leaf-500 text-cream-50 text-xs rounded-full">200–600 mdpl</span>
+          <span class="px-3 py-1.5 bg-cream-50 text-coffee-600 text-xs rounded-full border border-coffee-200">pH 4.5–5.5</span>
+        </div>
+      </div>
+
+      <!-- Excelsa -->
+      <div class="lift-card bg-cream-100 rounded-3xl p-7 md:p-9 border border-coffee-100 relative overflow-hidden">
+        <div class="absolute -top-8 -left-8 w-32 h-32 rounded-full bg-ember-400 opacity-20"></div>
+        <div class="flex items-start justify-between mb-6 relative">
+          <div class="w-16 h-16 rounded-2xl bg-coffee-500 flex items-center justify-center shadow-card">
+            <span class="text-cream-50 font-serif-display italic text-3xl">E</span>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-coffee-500">04 / 04</span>
+        </div>
+        <h3 class="font-serif-display text-3xl text-coffee-700 mb-1">Excelsa</h3>
+        <p class="text-xs uppercase tracking-wider text-leaf-500 italic">Coffea excelsa</p>
+        <p class="text-coffee-500 text-sm leading-relaxed mt-4">
+          Profil rasa fruity-tart yang langka dan memikat. Cocok untuk single origin eksperimental kelas atas.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="px-3 py-1.5 bg-coffee-700 text-cream-50 text-xs rounded-full">20–28°C</span>
+          <span class="px-3 py-1.5 bg-leaf-500 text-cream-50 text-xs rounded-full">300–800 mdpl</span>
+          <span class="px-3 py-1.5 bg-cream-50 text-coffee-600 text-xs rounded-full border border-coffee-200">pH 5.0–6.5</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== BOTTOM NAV (MOBILE) ============== -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-cream-50 border-t border-coffee-100 z-40 backdrop-blur-md bg-cream-50/95">
+  <div class="grid grid-cols-5">
+    <a href="index.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="home" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="kategori.html" class="bnav-item active flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="coffee" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Kategori</span>
+    </a>
+    <a href="daerah.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="map-pin" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Daerah</span>
+    </a>
+    <a href="lingkungan.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="leaf" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Lingkungan</span>
+    </a>
+    <a href="forum.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Forum</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

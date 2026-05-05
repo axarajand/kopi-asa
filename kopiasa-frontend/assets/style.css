@@ -1,0 +1,147 @@
+/* =============== KopiAsa Shared Styles =============== */
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FDFAF4;
+  color: #2A1709;
+}
+.font-script { font-family: 'Dancing Script', cursive; }
+.font-serif-display { font-family: 'Cormorant Garamond', serif; }
+
+/* Page transitions */
+.page { animation: fadeUp 0.45s ease-out; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Coffee splash decorative divider */
+.splash-divider {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'><path fill='%233F230F' d='M0,80 L0,40 C40,20 70,55 110,45 C150,35 175,15 220,25 C260,33 290,60 340,50 C390,40 410,18 460,28 C510,38 540,62 590,52 C640,42 660,20 710,30 C760,40 790,60 840,52 C890,44 920,22 970,30 C1020,38 1050,58 1100,50 C1150,42 1180,18 1230,28 C1280,38 1310,62 1360,55 C1400,50 1420,38 1440,42 L1440,80 Z'/></svg>");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grain-overlay {
+  background-image: radial-gradient(circle at 1px 1px, rgba(63,35,15,0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Hero coffee swirl */
+.hero-mug {
+  background: radial-gradient(ellipse at 30% 20%, #C99764 0%, #7A4A24 35%, #3F230F 75%, #180D05 100%);
+}
+
+/* Forum sidebar pill */
+.filter-pill { transition: all 0.2s ease; }
+.filter-pill:hover { transform: translateX(2px); }
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { scrollbar-width: none; }
+
+/* Animated underline for nav */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #7A4A24;
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link.active { color: #5C3518; font-weight: 600; }
+
+/* Bean float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-8px) rotate(4deg); }
+}
+.float-bean { animation: float 6s ease-in-out infinite; }
+.float-bean.delay-1 { animation-delay: 1s; }
+.float-bean.delay-2 { animation-delay: 2s; }
+
+/* Shimmer text */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #5C3518 0%, #D89744 50%, #5C3518 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Card hover */
+.lift-card {
+  transition:
+    transform 0.35s cubic-bezier(0.2,0.8,0.2,1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.lift-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -12px rgba(63,35,15,0.22);
+}
+
+/* Discussion card */
+.disc-card {
+  transition: all 0.25s ease;
+  border: 1px solid #F4E8CE;
+}
+.disc-card:hover {
+  border-color: #C99764;
+  box-shadow: 0 8px 24px -6px rgba(122, 74, 36, 0.15);
+  cursor: pointer;
+}
+
+.badge-tag {
+  background: #3F230F;
+  color: #FAF3E5;
+  font-size: 0.7rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Subtle decorative beans bg */
+.bean-bg {
+  background-image:
+    radial-gradient(ellipse 14px 20px at 10% 30%, rgba(63,35,15,0.05) 50%, transparent 51%),
+    radial-gradient(ellipse 10px 14px at 85% 70%, rgba(63,35,15,0.04) 50%, transparent 51%),
+    radial-gradient(ellipse 12px 18px at 60% 15%, rgba(63,35,15,0.04) 50%, transparent 51%),
+    radial-gradient(ellipse 8px 12px at 30% 85%, rgba(63,35,15,0.05) 50%, transparent 51%);
+}
+
+/* Pagination */
+.page-num {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.page-num.active { background: #5C3518; color: #FAF3E5; }
+.page-num:not(.active) {
+  background: #E8B061;
+  color: #3F230F;
+  cursor: pointer;
+}
+.page-num:not(.active):hover { background: #D89744; }
+
+/* Mobile bottom nav active */
+.bnav-item.active { color: #7A4A24; }
+.bnav-item.active .bnav-icon {
+  background: #F3E6D2;
+  transform: scale(1.05);
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KopiAsa — Beranda</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="assets/script.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="bg-cream-50">
+
+<!-- ============== TOP NAV (DESKTOP) ============== -->
+<header class="hidden md:block sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-coffee-100">
+  <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+    <a href="index.html">
+      <h1 class="font-script text-4xl text-coffee-700 leading-none">KopiAsa</h1>
+    </a>
+    <nav class="flex items-center gap-12 text-coffee-600">
+      <a href="index.html"      class="nav-link text-sm tracking-wide active">Beranda</a>
+      <a href="kategori.html"   class="nav-link text-sm tracking-wide">Kategori</a>
+      <a href="daerah.html"     class="nav-link text-sm tracking-wide">Daerah</a>
+      <a href="lingkungan.html" class="nav-link text-sm tracking-wide">Lingkungan</a>
+      <a href="forum.html"      class="nav-link text-sm tracking-wide">Forum</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="w-11 h-11 rounded-full bg-ember-400 hover:bg-ember-500 transition flex items-center justify-center text-coffee-700">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== TOP BAR (MOBILE) ============== -->
+<header class="md:hidden sticky top-0 z-40 bg-cream-50/95 backdrop-blur-md border-b border-coffee-100">
+  <div class="px-5 py-3.5 flex items-center justify-between">
+    <h1 class="font-script text-2xl text-coffee-700">KopiAsa</h1>
+    <button class="w-9 h-9 rounded-full bg-ember-400 flex items-center justify-center text-coffee-700">
+      <i data-lucide="user" class="w-4 h-4"></i>
+    </button>
+  </div>
+</header>
+
+<section class="page pb-24 md:pb-0">
+
+  <!-- HERO -->
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bean-bg pointer-events-none"></div>
+    <svg class="absolute top-12 right-8 w-32 h-32 text-leaf-200 opacity-40 hidden md:block float-bean" viewBox="0 0 100 100" fill="currentColor">
+      <path d="M50,5 C70,20 85,40 80,65 C75,85 55,95 40,90 C25,85 15,65 20,45 C25,25 35,12 50,5 Z"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-20 pb-16 md:pb-24 grid md:grid-cols-2 gap-10 items-center relative">
+      <div class="relative z-10">
+        <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-leaf-500 mb-5">
+          <span class="w-8 h-px bg-leaf-500"></span>
+          Sejak 2025 · Untuk Petani Indonesia
+        </span>
+        <h2 class="font-serif-display text-5xl md:text-7xl leading-[1.05] text-coffee-700 mb-6">
+          Sempurnakan setiap <em class="text-coffee-500">tahap</em><br/>
+          biji kopi <span class="font-script text-ember-500">terbaik</span> Anda.
+        </h2>
+        <p class="text-coffee-600 text-base md:text-lg leading-relaxed max-w-md mb-8">
+          Portal edukasi dan komunitas terbuka untuk petani kopi Indonesia. Pelajari teknik budidaya, pascapanen, hingga membaca pasar — langsung dari sesama petani.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="kategori.html" class="group bg-coffee-700 text-cream-50 px-7 py-3.5 rounded-full font-medium hover:bg-coffee-800 transition flex items-center gap-2">
+            Mulai Jelajahi
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+          </a>
+          <a href="forum.html" class="border border-coffee-300 text-coffee-700 px-7 py-3.5 rounded-full font-medium hover:bg-coffee-100 transition">
+            Gabung Forum
+          </a>
+        </div>
+
+        <div class="flex items-center gap-8 mt-12 pt-8 border-t border-coffee-200">
+          <div>
+            <p class="font-serif-display text-3xl text-coffee-700">12K+</p>
+            <p class="text-xs text-coffee-500 uppercase tracking-wider">Petani Bergabung</p>
+          </div>
+          <div>
+            <p class="font-serif-display text-3xl text-coffee-700">500+</p>
+            <p class="text-xs text-coffee-500 uppercase tracking-wider">Artikel Praktis</p>
+          </div>
+          <div>
+            <p class="font-serif-display text-3xl text-coffee-700">38</p>
+            <p class="text-xs text-coffee-500 uppercase tracking-wider">Daerah Sentra</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero illustration -->
+      <div class="relative h-[420px] md:h-[520px] flex items-center justify-center">
+        <svg class="absolute top-4 left-1/2 -translate-x-1/2 w-32 opacity-60" viewBox="0 0 100 80">
+          <path d="M30,75 Q25,55 35,40 Q45,25 35,5" stroke="#A6703B" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <path d="M50,75 Q60,55 50,35 Q40,15 55,2"  stroke="#A6703B" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M70,75 Q65,50 75,35 Q85,20 70,5"  stroke="#A6703B" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+
+        <div class="relative">
+          <div class="w-72 h-72 md:w-80 md:h-80 hero-mug rounded-full flex items-center justify-center shadow-lift relative">
+            <div class="absolute inset-4 rounded-full border-2 border-coffee-200/30"></div>
+            <div class="w-56 h-56 md:w-64 md:h-64 rounded-full bg-coffee-800 flex items-center justify-center shadow-inner">
+              <svg viewBox="0 0 100 100" class="w-32 h-32 text-coffee-200/60" fill="currentColor">
+                <path d="M50,15 C60,25 65,40 50,55 C35,40 40,25 50,15 Z" opacity="0.7"/>
+                <path d="M50,40 C62,52 64,68 50,82 C36,68 38,52 50,40 Z" opacity="0.5"/>
+                <ellipse cx="50" cy="85" rx="18" ry="3" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="absolute -top-6 -left-6 float-bean">
+            <div class="w-10 h-14 bg-coffee-700 rounded-full transform rotate-12 relative shadow-md">
+              <div class="absolute inset-1 border-l-2 border-coffee-500 rounded-full"></div>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -right-6 float-bean delay-1">
+            <div class="w-12 h-16 bg-coffee-600 rounded-full transform -rotate-12 relative shadow-md">
+              <div class="absolute inset-1 border-l-2 border-coffee-400 rounded-full"></div>
+            </div>
+          </div>
+          <div class="absolute top-1/2 -right-12 float-bean delay-2">
+            <div class="w-8 h-11 bg-coffee-500 rounded-full transform rotate-45 relative shadow-md">
+              <div class="absolute inset-1 border-l-2 border-coffee-300 rounded-full"></div>
+            </div>
+          </div>
+
+          <svg class="absolute -top-12 right-12 w-20 h-20 text-leaf-400" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50,10 Q70,25 75,50 Q70,75 50,90 Q30,75 25,50 Q30,25 50,10 Z" opacity="0.85"/>
+            <path d="M50,15 L50,85" stroke="#223E1A" stroke-width="1" opacity="0.5" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Jelajahi Seni Bertani Kopi" -->
+  <div class="bg-coffee-700 text-cream-50 relative overflow-hidden">
+    <div class="absolute inset-0 grain-overlay opacity-30"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24 relative">
+      <div class="grid md:grid-cols-12 gap-8 items-end">
+        <div class="md:col-span-5">
+          <span class="text-ember-400 text-xs uppercase tracking-[0.25em]">— Filosofi Kami</span>
+          <h3 class="font-serif-display text-4xl md:text-6xl mt-3 leading-tight">
+            Jelajahi <em class="text-ember-400">Seni</em><br/>
+            Bertani Kopi.
+          </h3>
+        </div>
+        <div class="md:col-span-7 md:pl-12">
+          <p class="text-cream-100/85 text-base md:text-lg leading-relaxed mb-6">
+            Setiap cangkir kopi yang dinikmati di seluruh dunia berakar pada keputusan kecil di kebun: kapan menyiram, bagaimana memangkas, kapan memetik. KopiAsa membantu Anda menguasai detail-detail itu.
+          </p>
+          <div class="grid grid-cols-3 gap-4 md:gap-8 mt-8">
+            <div class="border-l-2 border-ember-400 pl-4">
+              <p class="font-serif-display text-2xl md:text-3xl">01</p>
+              <p class="text-xs uppercase tracking-wider text-cream-100/70 mt-1">Tanam</p>
+            </div>
+            <div class="border-l-2 border-ember-400 pl-4">
+              <p class="font-serif-display text-2xl md:text-3xl">02</p>
+              <p class="text-xs uppercase tracking-wider text-cream-100/70 mt-1">Rawat</p>
+            </div>
+            <div class="border-l-2 border-ember-400 pl-4">
+              <p class="font-serif-display text-2xl md:text-3xl">03</p>
+              <p class="text-xs uppercase tracking-wider text-cream-100/70 mt-1">Panen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Kenali Ragam Biji Kopi Unggulan" - 4 cards -->
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
+      <div>
+        <span class="text-leaf-500 text-xs uppercase tracking-[0.25em]">— Varietas Unggulan</span>
+        <h3 class="font-serif-display text-4xl md:text-5xl text-coffee-700 mt-3 leading-tight">
+          Kenali Ragam <em class="text-coffee-500">Biji Kopi</em>
+        </h3>
+      </div>
+      <p class="text-coffee-500 max-w-sm text-sm">Empat jenis kopi yang menentukan karakter kebun Anda. Pilih dengan sadar.</p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      <div class="lift-card bg-cream-100 rounded-2xl p-6 border border-coffee-100">
+        <div class="w-14 h-14 rounded-xl bg-coffee-700 flex items-center justify-center mb-5">
+          <span class="text-cream-50 font-serif-display italic text-2xl">A</span>
+        </div>
+        <h4 class="font-serif-display text-2xl text-coffee-700">Arabika</h4>
+        <p class="text-xs uppercase tracking-wider text-leaf-500 mt-1">Coffea arabica</p>
+        <p class="text-coffee-500 text-sm mt-3 leading-relaxed">Aroma kompleks, asam cerah. Bintang utama specialty coffee dunia.</p>
+        <div class="flex gap-1.5 mt-4 flex-wrap">
+          <span class="text-[10px] px-2 py-1 bg-cream-50 rounded text-coffee-600">1.000+ mdpl</span>
+          <span class="text-[10px] px-2 py-1 bg-cream-50 rounded text-coffee-600">15–24°C</span>
+        </div>
+      </div>
+
+      <div class="lift-card bg-coffee-700 text-cream-50 rounded-2xl p-6">
+        <div class="w-14 h-14 rounded-xl bg-ember-400 flex items-center justify-center mb-5">
+          <span class="text-coffee-700 font-serif-display italic text-2xl">R</span>
+        </div>
+        <h4 class="font-serif-display text-2xl">Robusta</h4>
+        <p class="text-xs uppercase tracking-wider text-ember-400 mt-1">Coffea canephora</p>
+        <p class="text-cream-100/80 text-sm mt-3 leading-relaxed">Tubuh tebal, kafein tinggi, tahan hama. Tulang punggung kopi nasional.</p>
+        <div class="flex gap-1.5 mt-4 flex-wrap">
+          <span class="text-[10px] px-2 py-1 bg-coffee-800 rounded text-cream-100">400–800 mdpl</span>
+          <span class="text-[10px] px-2 py-1 bg-coffee-800 rounded text-cream-100">22–28°C</span>
+        </div>
+      </div>
+
+      <div class="lift-card bg-cream-100 rounded-2xl p-6 border border-coffee-100">
+        <div class="w-14 h-14 rounded-xl bg-leaf-500 flex items-center justify-center mb-5">
+          <span class="text-cream-50 font-serif-display italic text-2xl">L</span>
+        </div>
+        <h4 class="font-serif-display text-2xl text-coffee-700">Liberika</h4>
+        <p class="text-xs uppercase tracking-wider text-leaf-500 mt-1">Coffea liberica</p>
+        <p class="text-coffee-500 text-sm mt-3 leading-relaxed">Buah besar, rasa smoky-woody. Identitas khas kopi gambut Sumatera.</p>
+        <div class="flex gap-1.5 mt-4 flex-wrap">
+          <span class="text-[10px] px-2 py-1 bg-cream-50 rounded text-coffee-600">200–600 mdpl</span>
+          <span class="text-[10px] px-2 py-1 bg-cream-50 rounded text-coffee-600">25–30°C</span>
+        </div>
+      </div>
+
+      <div class="lift-card bg-cream-100 rounded-2xl p-6 border border-coffee-100">
+        <div class="w-14 h-14 rounded-xl bg-coffee-500 flex items-center justify-center mb-5">
+          <span class="text-cream-50 font-serif-display italic text-2xl">E</span>
+        </div>
+        <h4 class="font-serif-display text-2xl text-coffee-700">Excelsa</h4>
+        <p class="text-xs uppercase tracking-wider text-leaf-500 mt-1">Coffea excelsa</p>
+        <p class="text-coffee-500 text-sm mt-3 leading-relaxed">Rasa fruity-tart yang langka. Cocok untuk single origin eksperimental.</p>
+        <div class="flex gap-1.5 mt-4 flex-wrap">
+          <span class="text-[10px] px-2 py-1 bg-cream-50 rounded text-coffee-600">300–800 mdpl</span>
+          <span class="text-[10px] px-2 py-1 bg-cream-50 rounded text-coffee-600">20–28°C</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Apa yang Membuat KopiAsa Berbeda?" -->
+  <div class="bg-cream-100 relative overflow-hidden">
+    <div class="absolute inset-0 bean-bg pointer-events-none opacity-50"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24 relative">
+      <div class="text-center mb-14">
+        <span class="text-leaf-500 text-xs uppercase tracking-[0.25em]">— Mengapa Kami</span>
+        <h3 class="font-serif-display text-4xl md:text-5xl text-coffee-700 mt-3 leading-tight">
+          Apa yang Membuat <em class="text-coffee-500">KopiAsa</em> Berbeda?
+        </h3>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-cream-50 rounded-2xl p-7 border border-coffee-100 lift-card">
+          <div class="w-12 h-12 rounded-full bg-coffee-700 flex items-center justify-center mb-5">
+            <i data-lucide="book-open" class="w-5 h-5 text-cream-50"></i>
+          </div>
+          <h4 class="font-serif-display text-xl text-coffee-700 mb-2">Pengetahuan Praktis</h4>
+          <p class="text-coffee-500 text-sm leading-relaxed">Panduan langkah demi langkah dari penyuluh berpengalaman, bukan teori dari buku.</p>
+        </div>
+
+        <div class="bg-cream-50 rounded-2xl p-7 border border-coffee-100 lift-card">
+          <div class="w-12 h-12 rounded-full bg-leaf-500 flex items-center justify-center mb-5">
+            <i data-lucide="award" class="w-5 h-5 text-cream-50"></i>
+          </div>
+          <h4 class="font-serif-display text-xl text-coffee-700 mb-2">Fokus pada Kualitas</h4>
+          <p class="text-coffee-500 text-sm leading-relaxed">Setiap konten ditinjau pakar agroteknologi sebelum tayang ke komunitas.</p>
+        </div>
+
+        <div class="bg-cream-50 rounded-2xl p-7 border border-coffee-100 lift-card">
+          <div class="w-12 h-12 rounded-full bg-ember-500 flex items-center justify-center mb-5">
+            <i data-lucide="users" class="w-5 h-5 text-cream-50"></i>
+          </div>
+          <h4 class="font-serif-display text-xl text-coffee-700 mb-2">Komunitas Hangat</h4>
+          <p class="text-coffee-500 text-sm leading-relaxed">Forum diskusi aktif 24/7 — tanya hari ini, jawaban dari petani lain hari ini juga.</p>
+        </div>
+
+        <div class="bg-cream-50 rounded-2xl p-7 border border-coffee-100 lift-card">
+          <div class="w-12 h-12 rounded-full bg-coffee-500 flex items-center justify-center mb-5">
+            <i data-lucide="trending-up" class="w-5 h-5 text-cream-50"></i>
+          </div>
+          <h4 class="font-serif-display text-xl text-coffee-700 mb-2">Akses Pasar</h4>
+          <p class="text-coffee-500 text-sm leading-relaxed">Data harga real-time dan informasi pembeli untuk mengangkat posisi tawar petani.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNER besar antioksidan -->
+  <div class="bg-coffee-800 text-cream-50 relative overflow-hidden">
+    <div class="absolute inset-0 grain-overlay opacity-40"></div>
+    <svg class="absolute -right-20 -top-20 w-96 h-96 text-coffee-700 opacity-50" viewBox="0 0 100 100" fill="currentColor">
+      <ellipse cx="50" cy="50" rx="40" ry="48" transform="rotate(20 50 50)"/>
+    </svg>
+    <svg class="absolute -left-16 -bottom-16 w-80 h-80 text-coffee-700 opacity-30" viewBox="0 0 100 100" fill="currentColor">
+      <ellipse cx="50" cy="50" rx="40" ry="48" transform="rotate(-25 50 50)"/>
+    </svg>
+
+    <div class="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-32 relative text-center">
+      <div class="inline-block mb-6">
+        <i data-lucide="sparkles" class="w-8 h-8 text-ember-400 mx-auto"></i>
+      </div>
+      <h3 class="font-serif-display text-4xl md:text-7xl leading-[1.1]">
+        Kopi mengandung <em class="shimmer-text">antioksidan alami</em><br class="hidden md:block"/>
+        yang melebihi banyak <em class="text-ember-400">buah segar</em>.
+      </h3>
+      <p class="mt-8 text-cream-100/80 text-base md:text-lg max-w-2xl mx-auto">
+        Setiap biji menyimpan asam klorogenat, polifenol, dan senyawa bermanfaat lain. Kualitas tanam Anda adalah kualitas kesehatan jutaan orang.
+      </p>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
+      <div>
+        <span class="text-leaf-500 text-xs uppercase tracking-[0.25em]">— Suara Petani</span>
+        <h3 class="font-serif-display text-4xl md:text-5xl text-coffee-700 mt-3 leading-tight">
+          Apa Kata <em class="text-coffee-500">Rekan Petani?</em>
+        </h3>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="bg-cream-100 rounded-2xl p-7 relative border border-coffee-100">
+        <i data-lucide="quote" class="w-8 h-8 text-ember-400 mb-4"></i>
+        <p class="text-coffee-700 leading-relaxed font-serif-display text-lg italic">
+          "Saya belajar fermentasi anaerobik dari forum KopiAsa. Hasilnya, harga jual ceri saya naik 40% musim lalu."
+        </p>
+        <div class="flex items-center gap-3 mt-6 pt-5 border-t border-coffee-200">
+          <div class="w-11 h-11 rounded-full bg-coffee-700 flex items-center justify-center text-cream-50 font-bold">PH</div>
+          <div>
+            <p class="text-sm font-semibold text-coffee-700">Pak Hidayat</p>
+            <p class="text-xs text-coffee-500">Petani · Aceh Gayo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-coffee-700 text-cream-50 rounded-2xl p-7 relative">
+        <i data-lucide="quote" class="w-8 h-8 text-ember-400 mb-4"></i>
+        <p class="leading-relaxed font-serif-display text-lg italic">
+          "Komunitas di sini benar-benar membantu — tanya soal busuk akar jam 11 malam, dijawab Pak Tani dari Toraja jam 11.30."
+        </p>
+        <div class="flex items-center gap-3 mt-6 pt-5 border-t border-coffee-600">
+          <div class="w-11 h-11 rounded-full bg-ember-400 flex items-center justify-center text-coffee-700 font-bold">SW</div>
+          <div>
+            <p class="text-sm font-semibold">Ibu Sariwati</p>
+            <p class="text-xs text-cream-100/70">Petani · Kintamani</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-cream-100 rounded-2xl p-7 relative border border-coffee-100">
+        <i data-lucide="quote" class="w-8 h-8 text-ember-400 mb-4"></i>
+        <p class="text-coffee-700 leading-relaxed font-serif-display text-lg italic">
+          "Panduan suhu ideal Liberika di sini sangat akurat — sesuai dengan apa yang saya alami di kebun gambut Jambi."
+        </p>
+        <div class="flex items-center gap-3 mt-6 pt-5 border-t border-coffee-200">
+          <div class="w-11 h-11 rounded-full bg-leaf-500 flex items-center justify-center text-cream-50 font-bold">RM</div>
+          <div>
+            <p class="text-sm font-semibold text-coffee-700">Pak Rusdi M.</p>
+            <p class="text-xs text-coffee-500">Petani · Jambi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER BESAR -->
+  <div class="relative">
+    <div class="splash-divider h-20 md:h-28"></div>
+    <footer class="bg-coffee-700 text-cream-50 relative overflow-hidden">
+      <div class="absolute inset-0 bean-bg opacity-40 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-5 md:px-8 py-12 md:py-16 grid md:grid-cols-4 gap-10 relative">
+        <div class="md:col-span-1">
+          <h4 class="font-script text-4xl mb-4">KopiAsa</h4>
+          <p class="text-cream-100/80 text-sm leading-relaxed">
+            KopiAsa adalah platform digital yang didedikasikan untuk memberdayakan petani kopi Indonesia melalui pengetahuan, komunitas, dan inovasi. Tujuan kami adalah meningkatkan kualitas dan kesejahteraan para petani kopi.
+          </p>
+          <p class="text-cream-100/60 text-xs mt-6">© 2025 KopiAsa. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+
+        <div>
+          <h5 class="font-serif-display text-xl mb-5">Menu Utama</h5>
+          <ul class="space-y-3 text-cream-100/85 text-sm">
+            <li><a href="index.html"      class="hover:text-ember-400 transition">Beranda</a></li>
+            <li><a href="kategori.html"   class="hover:text-ember-400 transition">Cek Kualitas</a></li>
+            <li><a href="forum.html"      class="hover:text-ember-400 transition">Forum Diskusi</a></li>
+            <li><a href="lingkungan.html" class="hover:text-ember-400 transition">Catatan</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="font-serif-display text-xl mb-5">Sumber Daya</h5>
+          <ul class="space-y-3 text-cream-100/85 text-sm">
+            <li><a class="hover:text-ember-400 cursor-pointer transition">Panduan Populer</a></li>
+            <li><a class="hover:text-ember-400 cursor-pointer transition">Kebijakan Privasi</a></li>
+            <li><a class="hover:text-ember-400 cursor-pointer transition">Syarat & Ketentuan</a></li>
+            <li><a class="hover:text-ember-400 cursor-pointer transition">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="font-serif-display text-xl mb-5">Hubungi Kami</h5>
+          <ul class="space-y-3 text-cream-100/85 text-sm">
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-ember-400 flex-shrink-0"></i>
+              <span>Sukabumi, Jawa Barat, Indonesia</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="globe" class="w-4 h-4 mt-0.5 text-ember-400 flex-shrink-0"></i>
+              <span>www.kopiasa.com</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="mail" class="w-4 h-4 mt-0.5 text-ember-400 flex-shrink-0"></i>
+              <span>halo@kopiasa.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<!-- ============== BOTTOM NAV (MOBILE) ============== -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-cream-50 border-t border-coffee-100 z-40 backdrop-blur-md bg-cream-50/95">
+  <div class="grid grid-cols-5">
+    <a href="index.html" class="bnav-item active flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="home" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="kategori.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="coffee" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Kategori</span>
+    </a>
+    <a href="daerah.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="map-pin" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Daerah</span>
+    </a>
+    <a href="lingkungan.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="leaf" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Lingkungan</span>
+    </a>
+    <a href="forum.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Forum</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

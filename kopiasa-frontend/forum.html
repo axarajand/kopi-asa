@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KopiAsa — Forum</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="assets/script.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="bg-cream-50">
+
+<!-- ============== TOP NAV (DESKTOP) ============== -->
+<header class="hidden md:block sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-coffee-100">
+  <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+    <a href="index.html">
+      <h1 class="font-script text-4xl text-coffee-700 leading-none">KopiAsa</h1>
+    </a>
+    <nav class="flex items-center gap-12 text-coffee-600">
+      <a href="index.html"      class="nav-link text-sm tracking-wide">Beranda</a>
+      <a href="kategori.html"   class="nav-link text-sm tracking-wide">Kategori</a>
+      <a href="daerah.html"     class="nav-link text-sm tracking-wide">Daerah</a>
+      <a href="lingkungan.html" class="nav-link text-sm tracking-wide">Lingkungan</a>
+      <a href="forum.html"      class="nav-link text-sm tracking-wide active">Forum</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="w-11 h-11 rounded-full bg-ember-400 hover:bg-ember-500 transition flex items-center justify-center text-coffee-700">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== TOP BAR (MOBILE) ============== -->
+<header class="md:hidden sticky top-0 z-40 bg-cream-50/95 backdrop-blur-md border-b border-coffee-100">
+  <div class="px-5 py-3.5 flex items-center justify-between">
+    <h1 class="font-serif-display text-2xl font-semibold text-coffee-700">Forum</h1>
+    <button class="w-9 h-9 rounded-full bg-ember-400 flex items-center justify-center text-coffee-700">
+      <i data-lucide="user" class="w-4 h-4"></i>
+    </button>
+  </div>
+</header>
+
+<section class="page pb-24 md:pb-16">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 pt-8 md:pt-12">
+
+    <!-- Page header (desktop) -->
+    <div class="hidden md:block mb-8">
+      <span class="text-leaf-500 text-xs uppercase tracking-[0.25em]">— Komunitas Petani</span>
+      <h2 class="font-serif-display text-4xl md:text-5xl text-coffee-700 mt-2">Forum Diskusi</h2>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-6">
+
+      <!-- ============= SIDEBAR ============= -->
+      <aside class="md:col-span-3 space-y-5">
+
+        <!-- Filters -->
+        <div class="bg-coffee-700 rounded-2xl p-3 space-y-2">
+          <button class="w-full filter-pill flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-coffee-600 transition text-left">
+            <span class="w-9 h-9 bg-leaf-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i data-lucide="sparkles" class="w-4 h-4 text-cream-50"></i>
+            </span>
+            <span>
+              <span class="block text-cream-50 text-sm font-semibold">Terbaru</span>
+              <span class="block text-cream-100/60 text-[11px]">Temukan pembaruan terkini</span>
+            </span>
+          </button>
+          <button class="w-full filter-pill flex items-center gap-3 px-3 py-3 rounded-xl bg-coffee-600 text-left">
+            <span class="w-9 h-9 bg-ember-400 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i data-lucide="flame" class="w-4 h-4 text-coffee-700"></i>
+            </span>
+            <span>
+              <span class="block text-cream-50 text-sm font-semibold">Populer</span>
+              <span class="block text-cream-100/60 text-[11px]">Topik yang selalu dibahas</span>
+            </span>
+          </button>
+          <button class="w-full filter-pill flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-coffee-600 transition text-left">
+            <span class="w-9 h-9 bg-coffee-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i data-lucide="bookmark" class="w-4 h-4 text-cream-50"></i>
+            </span>
+            <span>
+              <span class="block text-cream-50 text-sm font-semibold">Tersimpan</span>
+              <span class="block text-cream-100/60 text-[11px]">Topik yang disimpan</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Categories -->
+        <div class="bg-cream-100 rounded-2xl p-5 border border-coffee-100">
+          <h4 class="font-serif-display text-xl text-coffee-700 mb-4">Kategori</h4>
+          <div class="space-y-3">
+            <a class="flex items-center gap-3 hover:translate-x-0.5 transition cursor-pointer">
+              <span class="w-9 h-9 bg-coffee-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="bug" class="w-4 h-4 text-coffee-700"></i>
+              </span>
+              <span class="flex-1">
+                <span class="block text-coffee-700 text-sm font-semibold">Hama & Penyakit</span>
+                <span class="block text-coffee-400 text-[11px]">12.840 Diskusi</span>
+              </span>
+            </a>
+            <a class="flex items-center gap-3 hover:translate-x-0.5 transition cursor-pointer">
+              <span class="w-9 h-9 bg-ember-400/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="circle-dollar-sign" class="w-4 h-4 text-coffee-700"></i>
+              </span>
+              <span class="flex-1">
+                <span class="block text-coffee-700 text-sm font-semibold">Proses Pascapanen</span>
+                <span class="block text-coffee-400 text-[11px]">9.512 Diskusi</span>
+              </span>
+            </a>
+            <a class="flex items-center gap-3 hover:translate-x-0.5 transition cursor-pointer">
+              <span class="w-9 h-9 bg-leaf-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="flask-conical" class="w-4 h-4 text-leaf-500"></i>
+              </span>
+              <span class="flex-1">
+                <span class="block text-coffee-700 text-sm font-semibold">Pupuk & Nutrisi</span>
+                <span class="block text-coffee-400 text-[11px]">7.230 Diskusi</span>
+              </span>
+            </a>
+            <a class="flex items-center gap-3 hover:translate-x-0.5 transition cursor-pointer">
+              <span class="w-9 h-9 bg-coffee-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="sprout" class="w-4 h-4 text-coffee-700"></i>
+              </span>
+              <span class="flex-1">
+                <span class="block text-coffee-700 text-sm font-semibold">Budidaya Kopi</span>
+                <span class="block text-coffee-400 text-[11px]">11.450 Diskusi</span>
+              </span>
+            </a>
+            <a class="flex items-center gap-3 hover:translate-x-0.5 transition cursor-pointer">
+              <span class="w-9 h-9 bg-leaf-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="trending-up" class="w-4 h-4 text-leaf-500"></i>
+              </span>
+              <span class="flex-1">
+                <span class="block text-coffee-700 text-sm font-semibold">Harga & Pasar</span>
+                <span class="block text-coffee-400 text-[11px]">5.892 Diskusi</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ============= MAIN AREA ============= -->
+      <main class="md:col-span-9 space-y-4">
+
+        <!-- Search + Buat Topik -->
+        <div class="bg-coffee-700 rounded-2xl p-3 flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-ember-400 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="user" class="w-5 h-5 text-coffee-700"></i>
+          </div>
+          <div class="flex-1 flex items-center gap-2 bg-coffee-700 rounded-lg">
+            <i data-lucide="search" class="w-4 h-4 text-cream-100/60 ml-2"></i>
+            <input type="text" placeholder="Cari artikel atau diskusi..." class="bg-transparent flex-1 py-2 text-cream-50 placeholder:text-cream-100/50 text-sm focus:outline-none">
+          </div>
+          <button class="bg-ember-400 hover:bg-ember-500 transition text-coffee-700 px-5 py-2.5 rounded-lg text-sm font-semibold whitespace-nowrap flex items-center gap-2">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Buat Topik</span>
+          </button>
+        </div>
+
+        <!-- Discussion cards -->
+        <div class="space-y-3">
+
+          <!-- Card 1 -->
+          <a href="forum-detail.html" class="block disc-card bg-cream-50 rounded-2xl p-5 md:p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-serif-display text-xl md:text-2xl text-coffee-700 mb-3">Proses Pascapanen Natural untuk Pemula</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="badge-tag">pascapanen</span>
+                  <span class="badge-tag">pemula</span>
+                  <span class="badge-tag">kualitas</span>
+                </div>
+                <div class="flex items-center justify-between flex-wrap gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-coffee-700 flex items-center justify-center text-cream-50 text-sm font-semibold flex-shrink-0">PH</div>
+                    <div>
+                      <p class="text-sm font-semibold text-coffee-700 flex items-center gap-1.5">Bpk. Hidayat <span class="w-1 h-1 bg-coffee-300 rounded-full"></span></p>
+                      <p class="text-xs text-coffee-400">3 minggu lalu</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-5 text-sm text-coffee-500">
+                    <span class="flex items-center gap-1.5"><i data-lucide="heart" class="w-4 h-4"></i>1.247 Disukai</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4"></i>56 Komentar</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-coffee-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="bookmark" class="w-4 h-4 text-ember-400"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="forum-detail.html" class="block disc-card bg-cream-50 rounded-2xl p-5 md:p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-serif-display text-xl md:text-2xl text-coffee-700 mb-3">Cara Mengatasi Serangan Penggerek Buah Kopi</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="badge-tag">hama</span>
+                  <span class="badge-tag">PBKO</span>
+                  <span class="badge-tag">arabika</span>
+                </div>
+                <div class="flex items-center justify-between flex-wrap gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-leaf-500 flex items-center justify-center text-cream-50 text-sm font-semibold flex-shrink-0">SW</div>
+                    <div>
+                      <p class="text-sm font-semibold text-coffee-700 flex items-center gap-1.5">Ibu Sariwati <span class="w-1 h-1 bg-coffee-300 rounded-full"></span></p>
+                      <p class="text-xs text-coffee-400">5 hari lalu</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-5 text-sm text-coffee-500">
+                    <span class="flex items-center gap-1.5"><i data-lucide="heart" class="w-4 h-4"></i>892 Disukai</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4"></i>34 Komentar</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-coffee-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="bookmark" class="w-4 h-4 text-ember-400"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="forum-detail.html" class="block disc-card bg-cream-50 rounded-2xl p-5 md:p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-serif-display text-xl md:text-2xl text-coffee-700 mb-3">Diskusi Harga Ceri Merah Musim Ini</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="badge-tag">harga</span>
+                  <span class="badge-tag">pasar</span>
+                  <span class="badge-tag">2025</span>
+                </div>
+                <div class="flex items-center justify-between flex-wrap gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-ember-500 flex items-center justify-center text-cream-50 text-sm font-semibold flex-shrink-0">RM</div>
+                    <div>
+                      <p class="text-sm font-semibold text-coffee-700 flex items-center gap-1.5">Pak Rusdi M. <span class="w-1 h-1 bg-coffee-300 rounded-full"></span></p>
+                      <p class="text-xs text-coffee-400">1 hari lalu</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-5 text-sm text-coffee-500">
+                    <span class="flex items-center gap-1.5"><i data-lucide="heart" class="w-4 h-4"></i>2.103 Disukai</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4"></i>128 Komentar</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-coffee-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="bookmark" class="w-4 h-4 text-ember-400"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="forum-detail.html" class="block disc-card bg-cream-50 rounded-2xl p-5 md:p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-serif-display text-xl md:text-2xl text-coffee-700 mb-3">Pupuk Organik dari Kulit Kopi: Resep Praktis</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="badge-tag">pupuk</span>
+                  <span class="badge-tag">organik</span>
+                  <span class="badge-tag">kompos</span>
+                </div>
+                <div class="flex items-center justify-between flex-wrap gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-coffee-500 flex items-center justify-center text-cream-50 text-sm font-semibold flex-shrink-0">AS</div>
+                    <div>
+                      <p class="text-sm font-semibold text-coffee-700 flex items-center gap-1.5">Pak Ahmad S. <span class="w-1 h-1 bg-coffee-300 rounded-full"></span></p>
+                      <p class="text-xs text-coffee-400">2 minggu lalu</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-5 text-sm text-coffee-500">
+                    <span class="flex items-center gap-1.5"><i data-lucide="heart" class="w-4 h-4"></i>645 Disukai</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4"></i>27 Komentar</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-coffee-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="bookmark" class="w-4 h-4 text-ember-400"></i>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex items-center justify-center gap-2 pt-6">
+          <span class="page-num active">1</span>
+          <span class="page-num">2</span>
+          <span class="page-num">3</span>
+          <span class="page-num">4</span>
+          <span class="page-num">5</span>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BOTTOM NAV (MOBILE) ============== -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-cream-50 border-t border-coffee-100 z-40 backdrop-blur-md bg-cream-50/95">
+  <div class="grid grid-cols-5">
+    <a href="index.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="home" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="kategori.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="coffee" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Kategori</span>
+    </a>
+    <a href="daerah.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="map-pin" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Daerah</span>
+    </a>
+    <a href="lingkungan.html" class="bnav-item flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="leaf" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Lingkungan</span>
+    </a>
+    <a href="forum.html" class="bnav-item active flex flex-col items-center gap-1 py-2.5 text-coffee-400 transition">
+      <span class="bnav-icon w-9 h-9 rounded-xl flex items-center justify-center transition">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+      </span>
+      <span class="text-[10px] font-medium">Forum</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>
